@@ -13,6 +13,8 @@
     --secondaryClr: #01ACFD;
     --blackClr:#111111;
     --whiteClr: #fff;
+    --grayClr: #808080;
+    --purpleClr: #8700ff;
     --pasteClr: #3cd8e8;
     --BgClr: #f7f7f7;
     /* box shadow color */
@@ -41,8 +43,6 @@ header {
     font-weight: 800;
 }
 .containedBtn {
-    outline: none;
-    border: none;
     padding: 20px 40px;
     color: white;
     border-radius: 12px;
@@ -63,10 +63,85 @@ header {
 .heroTitle {
     font-size: clamp(2rem, calc(4.5vw + 0.5rem ), 4rem);  
 }
-.banner-area {
-    padding: 10px;
+.title {
+    font-size:clamp(1.8rem, calc(3vw + 1rem), 3rem) ;
+}
+.subtitle {
+    font-size: clamp(1rem, calc(1vw + 0.5rem), 1.5rem);
+}
+.paragraph {
+    font-size: clamp(0.6rem , calc(1vw + 0.5rem), 1rem);
+    color:var(--grayClr) ;
 }
 
+.curriculum-area , .ourStories{
+    padding: 60px 0px;
+}
+.navigationIcon  button {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+}
+.box {
+    box-shadow: var(--boxShadow);
+    border-radius: 18px;
+}
+#box-1 {
+    background: var(--boxBg1);
+}
+#box-2 {
+    background: var(--boxBg2);
+}
+#box-3 {
+    background: var(--boxBg3);
+}
+.readBtn {
+    background: transparent;
+
+}
+#card-1 {
+    grid-area: card1;
+}
+#card-2 {
+    grid-area: card2;
+}
+#card-3 {
+    grid-area: card3;
+}
+#card-4 {
+    grid-area: card4;
+}
+#card-5 {
+    grid-area: card5;
+}
+.storyBoxCtn {
+    display: grid;
+    gap: 20px;
+   
+    grid-template-areas: 
+    "card1 card1 card2 card3"
+    "card1 card1 card4 card5"
+    ;
+}
+
+.OurStorieswithYou {
+    background: url(assets/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+}
+.storyCard {
+    height: 100%;
+    background-color: var(--whiteClr);
+    border-radius: 20px;
+}
+.storyImg{
+    width: 100%;
+}
+.storyImg > img  {
+    border-radius: 20px 20px 0px 0px;
+}
+.storyContent {
+    padding: 0px 20px 20px 20px;
+}
 
 
 /* sheared styles  */
@@ -85,29 +160,44 @@ header {
 .text-secondary {
     color: var(--secondaryClr);
 }
+.text-purple {
+    color: var(--purpleClr);
+}
 .my-24 {
     margin: 24px 0px;
 }
 
-.navbar, .banner-area {
+.navbar, .banner-area, .curriculum-area, .ourStories {
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.navbar , .navleft, .navLinks, .banner-area{
+.navbar , .navleft, .navLinks, .banner-area,
+.curriculumBoxCtn, .curriculum-area, .navigationIcon,
+.box, .content, .ourStories, .storyCard, .storyContent{
     display: flex;
     align-items: center;
+}
+.curriculum-area, .box , .content, .ourStories, .storyCard, .storyContent{
+    flex-direction: column;
 }
 .navbar {
     justify-content: space-between;
 }
+.curriculum-area, .ourStories {
+    gap: 80px;
+}
 .banner-area {
     gap: 50px;
 }
-.navLinks {
+.navLinks , .curriculumBoxCtn, .box, .storyCard,
+.storyContent{
     gap: 30px;
 }
-.navleft {
+.content {
+    gap: 1.25rem;
+}
+.navleft, .navigationIcon {
     gap: 10px;
 }
 .navbar {
@@ -116,17 +206,30 @@ header {
 .navLinks {
     font-size:1.25rem;
 }
-.menuBar, .containedBtn {
+.menuBar, .containedBtn, .readBtn {
     cursor: pointer;
 }
 
-.heroTitle {
+.heroTitle  , .title , .readBtn{
     font-weight: 800;
 }
 .containedBtn, .heroPara {
     font-size: clamp(0.8rem, calc(1.25vw + 0.5rem), 1.25rem);
 }
 
+.banner-area{
+    padding: 10px;
+}
+.box {
+    padding: 50px 20px;
+}
+.content {
+    text-align: center;
+}
+.containedBtn , .readBtn {
+    outline: none;
+    border: none;
+}
 
 
 /* responsive code for mobile */
@@ -143,12 +246,44 @@ header {
     .banner-area {
         flex-direction: column-reverse;
     }
+    .container {
+        padding: 0px 20px;
+    } 
+    .curriculum-area, .ourStories {
+        gap: 30px;
+    }   
+    .curriculumBoxCtn {
+        flex-direction: column;
+    }
     .bannerContent {
         text-align: center;
     }
     .banner-area {
         padding: 20px;
     }
+    #card-1{
+        display: none;
+    }
+    .storyBoxCtn {
+        display: grid;
+        gap: 20px;
+       
+        grid-template-areas: 
+        "  card2 card3"
+        "  card4 card5"
+        ;
+    }
+    .storyCard {
+        gap: 15px;
+        border-radius: 10px;
+    }
+    .storyImg > img {
+        border-radius: 10px 10px 0px 0px;
+    }
+    .storyContent {
+        padding: 0px 10px 10px 10px;
+    }
+
     /* .bannerImg > img {
         width: calc(100% - 40px);
     } */
