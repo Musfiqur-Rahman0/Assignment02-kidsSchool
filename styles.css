@@ -93,13 +93,14 @@ footer, .containedBtn {
 .navbar , .navleft, .navLinks, .banner-area,
 .curriculumBoxCtn, .curriculum-area, .navigationIcon,
 .box, .content, .ourStories, .storyCard, .storyContent, 
-.footerContent, .footLogoCtn, .leftFoot, .footLinks,  .rightFoot ,.footIcons{
+.footerContent, .footLogoCtn, .leftFoot, .footLinks, 
+ .rightFoot ,.footIcons, .bannerContent{
     display: flex;
     align-items: center;
 }
 
 .curriculum-area, .box , .content, .ourStories, .storyCard,
- .storyContent, .leftFoot, .footLinks, .rightFoot{
+ .storyContent, .leftFoot, .footLinks, .rightFoot, .bannerContent{
     flex-direction: column;
 }
 .navbar, .footerContent {
