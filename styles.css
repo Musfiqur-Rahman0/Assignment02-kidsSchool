@@ -325,7 +325,7 @@ footer {
     border-radius: 20px;
     color: var(--whiteClr);
     font-weight: bold;
-    bottom: -2%;
+    bottom: calc(0% - 10px);
     left: 5%;
     font-size: clamp(10px , calc(1vw + 0.5rem), 1rem);
     z-index: 1;
@@ -406,7 +406,7 @@ footer {
 
 /* responsive code for mobile */
 @media screen and (max-width: 576px) {
-    .navLinks, .navRight, .navigationIcon {
+    .navLinks, .navRight, .navigationIcon, .brand {
         display: none;
     }
 
