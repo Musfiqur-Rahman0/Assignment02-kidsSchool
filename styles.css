@@ -94,13 +94,13 @@ footer, .containedBtn {
 .curriculumBoxCtn, .curriculum-area, .navigationIcon,
 .box, .content, .ourStories, .storyCard, .storyContent, 
 .footerContent, .footLogoCtn, .leftFoot, .footLinks, 
- .rightFoot ,.footIcons, .bannerContent{
+ .rightFoot ,.footIcons {
     display: flex;
     align-items: center;
 }
 
 .curriculum-area, .box , .content, .ourStories, .storyCard,
- .storyContent, .leftFoot, .footLinks, .rightFoot, .bannerContent{
+ .storyContent, .leftFoot, .footLinks, .rightFoot{
     flex-direction: column;
 }
 .navbar, .footerContent {
@@ -309,6 +309,12 @@ footer {
     padding: 10px;
     border-radius: 8px; 
 }
+marquee {
+    color: red;
+}
+.paragraph , .date{
+    font-family: "Raleway";
+}
 /* .date-1 {
     position: absolute;
     padding: 0px 20px;
@@ -430,7 +436,11 @@ footer {
     .curriculum-area, .ourStories, .footerContent {
         gap: 30px;
     }   
-    .curriculumBoxCtn, .footerContent {
+    .bannerContent {
+        display: flex;
+        align-items: center;
+    }
+    .curriculumBoxCtn, .footerContent, .bannerContent {
         flex-direction: column;
     }
     
@@ -468,6 +478,9 @@ footer {
    .date {
     padding: 5px 10px;
 
+   }
+   .my-24 {
+    margin: 15px 0px;
    }
     /* .bannerImg > img {
         width: calc(100% - 40px);
