@@ -127,7 +127,7 @@ footer, .containedBtn {
     gap: 10px;
 }
 .navbar {
-    padding: 20px 10px;
+    padding: 10px 20px;
 }
 .navLinks {
     font-size:1.25rem;
@@ -196,7 +196,7 @@ header {
     max-width: 640px;
 }
 .heroTitle {
-    font-size: clamp(2rem, calc(4.5vw + 0.5rem ), 3.85rem);  
+    font-size: clamp(2.25rem, calc(4.5vw + 0.5rem ), 3.85rem);  
 }
 .title {
     font-size:clamp(1.8rem, calc(3vw + 1rem), 3rem) ;
@@ -315,17 +315,7 @@ marquee {
 .paragraph , .date{
     font-family: "Raleway";
 }
-/* .date-1 {
-    position: absolute;
-    padding: 0px 20px;
-    border-radius: 20px;
-    background-color: var(--secondaryClr);
-    color: var(--whiteClr);
-    font-weight: bold;
-    bottom: 0%;
-    left: 5%;
-    z-index: 1;
-} */
+
 .date {
     position: absolute;
     padding: 10px 20px;
@@ -416,11 +406,9 @@ marquee {
     .navLinks, .navRight, .navigationIcon, .brand {
         display: none;
     }
-
     .menuBar{
         display: block;
     }
-
     .navbar {
         border-bottom: 1px solid var(--primaryClr);
     }
@@ -436,10 +424,7 @@ marquee {
     .curriculum-area, .ourStories, .footerContent {
         gap: 30px;
     }   
-    .bannerContent {
-        display: flex;
-        align-items: center;
-    }
+ 
     .curriculumBoxCtn, .footerContent, .bannerContent {
         flex-direction: column;
     }
@@ -482,7 +467,38 @@ marquee {
    .my-24 {
     margin: 15px 0px;
    }
-    /* .bannerImg > img {
-        width: calc(100% - 40px);
-    } */
+    
+}
+
+/* responsive code for tab */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .navLinks, .navRight, .navigationIcon  {
+        display: none;
+    }
+    .menuBar{
+        display: block;
+    }  
+    .banner-area {
+        flex-direction: column-reverse;
+    }
+    .bannerImg {
+        width: 50%;
+    }
+    .bannerContent  {
+        width: 100%;
+    }
+    .bannerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .date{
+        padding: 5px 10px;
+    }
+    footer {
+        height: auto;
+        padding: 60px 0px;
+    }
+   
 }
