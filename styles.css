@@ -431,6 +431,8 @@ marquee {
     
     .bannerContent {
         text-align: center;
+        display: flex;
+        align-items: center;
     }
     .banner-area {
         padding: 20px;
