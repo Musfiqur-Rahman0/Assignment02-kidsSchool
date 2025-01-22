@@ -484,7 +484,7 @@ marquee {
         flex-direction: column-reverse;
     }
     .bannerImg {
-        width: 50%;
+        width: 60%;
     }
     .bannerContent  {
         width: 100%;
@@ -501,6 +501,19 @@ marquee {
     footer {
         height: auto;
         padding: 60px 0px;
+    }
+    .storyBoxCtn {
+        display: grid;
+        gap: 20px;
+       
+        grid-template-areas: 
+        "  card1 card1 card1"
+        "  card3 card4 card2"
+        
+        ;
+    }
+    #card-5 {
+        display: none;
     }
    
 }
